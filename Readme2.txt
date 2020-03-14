@@ -1,1 +1,0 @@
-Upload question for TSQL
