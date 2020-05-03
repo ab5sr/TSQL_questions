@@ -1,5 +1,6 @@
+  
 --1.
---Using DELETE, remove all rows that were inserted using the recorded when in the WHERE clause
+--Using DELETE, remove all rows that were inserted into the Warehouse.VehicleTemperatures table using the recorded when in the WHERE clause
 --
 --Best practice is that while developing write all of your DELETE statements first as a SELECT statement
 --in order to see exactly what is being affected.
