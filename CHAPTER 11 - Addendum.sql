@@ -22,9 +22,10 @@ ORDER BY 1,2,3
 
 
 SELECT InvoiceID
-		,TRIM(value) AS Items      
-  FROM Sales.Invoices
-CROSS APPLY string_split(DeliveryInstructions, ',')
+ 	,TRIM(value) AS Items      
+FROM Sales.Invoices
+CROSS APPLY 
+	string_split(DeliveryInstructions, ',')
 
 --Each of the OUTER (LEFT) values get executed for each DeliveryInstruction sent to the function.
 --string split is a built-in table returning function.
@@ -36,9 +37,9 @@ CROSS APPLY string_split(DeliveryInstructions, ',')
 
 
 SELECT Backordered.backorderorderid
-		,OrderID
-  FROM [WideWorldImporters].[Sales].[Orders]
-  CROSS APPLY (VALUES(CASE WHEN BackorderOrderID IS NOT NULL THEN 'Y' ELSE 'N' END	)) Backordered (backorderorderid)
+	,OrderID
+FROM [WideWorldImporters].[Sales].[Orders]
+CROSS APPLY (VALUES(CASE WHEN BackorderOrderID IS NOT NULL THEN 'Y' ELSE 'N' END)) Backordered (backorderorderid)
   WHERE Backordered.backorderorderid='Y'	
 
 --APPLY operators are NON-ANSI standard, and you will not find the keywords in any implementation of SQL other than the TSQL extension.
@@ -57,13 +58,14 @@ CREATE TABLE #test
 --Set up the data
 INSERT INTO #test VALUES  ('1/1/2020', 'TX', 'Sunny'), ('1/1/2020','CA', 'Cloudy'), ('1/2/2020', 'OK', 'Rain')
 
+--Analyze the data
 SELECT * FROM #test
 
 --We have been tasked to transpose the state abbreviations of TX, OK, CA to columns, and for each given date list the weather value that occurred.
 --This is a simple pivot...see if you can follow along.
 
 SELECT anchor_column AS <first_column_alias>,
-[pivot_value1], [pivot_value2], ... [pivot_value_n]
+     [pivot_value1], [pivot_value2], ... [pivot_value_n]
 FROM 
     (<source_data>) AS <source_data_alias>
 PIVOT 
@@ -103,7 +105,7 @@ FOR
 --is happening where you aggregate the column, create a column header with the values for that date, and use an anchor column to display those values
 
 SELECT  
-        dt AS [WeatherDate]
+         dt AS [WeatherDate]
         ,TX
         ,CA
         ,OK 
