@@ -1,5 +1,7 @@
 --1.
 --Here is a simple CTE with CROSS APPLY
+--Here is another simple CTE with CROSS APPLY
+--This query simply compares LastEditedBy from two tables.
 --Note that this query can be rewritten using an INNER JOIN
 
 WITH Od
@@ -16,8 +18,7 @@ CROSS APPLY
 ORDER BY 1,2,3
 
 --2.
---Here is another simple CTE with CROSS APPLY
---This query simply compares LastEditedBy from two tables.
+--Here is a use of CROSS APPLY in combination with the STRING_SPLIT() internal table-returning function
 --Note that this query cannnot be rewritten using an INNER JOIN
 
 
