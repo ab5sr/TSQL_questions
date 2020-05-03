@@ -43,8 +43,10 @@ CROSS APPLY (VALUES(CASE WHEN BackorderOrderID IS NOT NULL THEN 'Y' ELSE 'N' END
   WHERE Backordered.backorderorderid='Y'	
 
 --APPLY operators are NON-ANSI standard, and you will not find the keywords in any implementation of SQL other than the TSQL extension.
---Other language do, however, include this concept and is used widely.
+--Other languages do, however, include this concept and it is used widely.
 
+
+--4.
 --I use the following quite a lot - you should be prepared to PIVOT data as needed; normally I do this action
 --more often than UNPIVOT. Use the following to set up a PIVOT example.
 
@@ -53,8 +55,7 @@ CREATE TABLE #test
     ,Plant varchar(30)
     ,Weather varchar(30))
 
---4.
---
+
 --Set up the data
 INSERT INTO #test VALUES  ('1/1/2020', 'TX', 'Sunny'), ('1/1/2020','CA', 'Cloudy'), ('1/2/2020', 'OK', 'Rain')
 
