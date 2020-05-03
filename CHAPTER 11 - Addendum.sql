@@ -18,7 +18,7 @@ ORDER BY 1,2,3
 
 --2.
 --Here is a use of CROSS APPLY in combination with the STRING_SPLIT() internal table-returning function
---Note that this query cannnot be rewritten using an INNER JOIN
+--Note that this query cannot be rewritten using an INNER JOIN
 
 
 SELECT InvoiceID
@@ -33,7 +33,7 @@ CROSS APPLY
 --3.
 --Here is another cool use of CROSS APPLY. Notice that the CASE only needs to be written
 --in the APPLY and not in the SELECT and WHERE clause.
---Note that this query cannnot be rewritten using an INNER JOIN
+--Note that this query cannot be rewritten using an INNER JOIN
 
 
 SELECT Backordered.backorderorderid
