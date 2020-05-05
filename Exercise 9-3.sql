@@ -8,6 +8,8 @@ SELECT FULLTEXTSERVICEPROPERTY('IsFullTextInstalled')
  --Highlight the follwing and hit the F5 key; this installs and activates Full Text objects in the database.
 
 EXEC [Application].[Configuration_ApplyFullTextIndexing]
+
+--If it is installed you will get a 1 when you run the above, 0 if not installed.
  
 
 SELECT *
