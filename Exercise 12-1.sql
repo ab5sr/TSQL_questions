@@ -88,3 +88,18 @@ SELECT @a=5, @b=10
 SELECT @c = @a + @b
 
 SELECT @c
+
+--In SQL Server, assignment goes from right to left; the Righ side of the mathematical operation is evaluated first and then stored
+--from there into the Left side. So here, @a and @b are summed, and then move to @c in the assignment.
+
+--Guess the value of @c is now, keeping in mind our rules that we just went over:
+
+DECLARE @a INT
+DECLARE @b INT
+DECLARE @c INT
+
+SELECT @a=5, @b=10, @c = 1000
+
+SELECT @c = @a + @b + @c
+
+SELECT @c
