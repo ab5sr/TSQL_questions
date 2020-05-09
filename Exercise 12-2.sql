@@ -40,7 +40,7 @@ SELECT IIF( @cnt <= 8000, '<= 8000 rows' ,'> 8000 rows')
  --table. Otherwise display the Application.StateProvinces table.
 
 
-DECLARE @Value varchar(10)= 'Cities '
+DECLARE @Value varchar(10)= 'Cities'
 
 IF @value='states'   
     SELECT * FROM Application.StateProvinces
