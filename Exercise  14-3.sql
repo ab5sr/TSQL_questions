@@ -16,7 +16,7 @@ GO
 --2.
 --Write a User-Defined function named temperature; you supply a numerical value Farenheit and a 'c' denoting that the results should be in Celcius
 --or a numerical value and an 'F', indicating that the value is Celcius and the function should convert the value to Farenheit and return it.
---Hint: search for the conversions using your favorite search engine. You can also check your work on the internet.
+--Hint: search for the conversion formulas using your favorite search engine. You can also check your work on the internet.
 
 
 CREATE FUNCTION temperature (@temp int, @ReturnUnitsIn char(1))
