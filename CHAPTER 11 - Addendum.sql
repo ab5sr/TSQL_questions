@@ -79,16 +79,10 @@ PIVOT
 --Try to follow along with the template, above:
 
 SELECT
-     dt AS [WeatherDate]
-    ,[TX]
-    ,[CA]
-    ,[OK]
+     dt AS [WeatherDate],[TX],[CA],[OK]
 FROM  
   (  
-    SELECT
-        dt
-        ,plant
-        ,weather
+    SELECT dt, plant,weather
     FROM #test 
   ) src 
 PIVOT  
@@ -106,10 +100,7 @@ FOR
 --is happening where you aggregate the column, create a column header with the values for that date, and use an anchor column to display those values
 
 SELECT  
-         dt AS [WeatherDate]
-        ,TX
-        ,CA
-        ,OK 
+         dt AS [WeatherDate],TX,CA,OK 
 FROM
     (SELECT
         dt
