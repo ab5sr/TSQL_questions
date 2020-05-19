@@ -1,8 +1,9 @@
 --For those interested, here is a very simple trigger.
---Although SQL Server triggers are not covered in this book at mentioned, this is an example of one.
+--Although SQL Server triggers are not covered in this book as mentioned, this is an example of one.
 --A trigger can be thought of as a stored procedure associated with a table.
 --For the most part, triggers are hard to debug and can be confusing; having said that, this example
 --is neither, thus a handy addition.
+--It logs when a record has been updated in a table.
 
 DROP TABLE IF EXISTS dbo.Customers
 go
