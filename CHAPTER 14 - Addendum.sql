@@ -4,6 +4,7 @@
 --For the most part, triggers are hard to debug and can be confusing; having said that, this example
 --is neither, thus a handy addition.
 --It logs when a record has been updated in a table.
+--Explore the virtual inserted and deleted trigger tables in SQL Server.
 
 DROP TABLE IF EXISTS dbo.Customers
 go
