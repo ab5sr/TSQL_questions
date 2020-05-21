@@ -2,7 +2,7 @@
 --Write a User-Defined function named Greatest that inputs two decimals and returns the
 --greater of the two.
 
-CREATE FUNCTION sys.Greatest (@parm1 decimal (10,2), @parm2 decimal (10,2))
+CREATE FUNCTION dbo.Greatest (@parm1 decimal (10,2), @parm2 decimal (10,2))
 RETURNS decimal (10,2)
 AS
 BEGIN
