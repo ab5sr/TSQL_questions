@@ -6,7 +6,7 @@ CREATE FUNCTION dbo.Greatest (@parm1 decimal (10,2), @parm2 decimal (10,2))
 RETURNS decimal (10,2)
 AS
 BEGIN
-      RETURN (CASE WHEN @parm1 > @parm2 THEN @parm1 ELSE @parm2 END)
+      RETURN (IIF( @parm1 > @parm2, @parm1, @parm2 ))
 END
 GO
 
