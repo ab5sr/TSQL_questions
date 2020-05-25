@@ -36,4 +36,18 @@ GO
 SELECT dbo.Temperature( 0 , 'f')
 
 
+--For those interested, here is an example of a CLR User-defined function, the same as dbo.Greatest() written above:
+
+
+using System.Data.SqlTypes;
+using Microsoft.SqlServer.Server;
+
+public partial class UserDefinedFunctions
+{
+    [Microsoft.SqlServer.Server.SqlFunction]
+    public static SqlInt32 Greatest(int num1, int num2)
+    {
+        return num1 > num2 ? num1 : num2;
+    }
+}
 
