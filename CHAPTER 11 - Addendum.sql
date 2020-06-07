@@ -32,7 +32,7 @@ CROSS APPLY
 
 --3.
 --Here is another cool use of CROSS APPLY. Notice that the CASE only needs to be written
---in the APPLY and not in the SELECT and WHERE clause.
+--in the APPLY and not in the SELECT list and WHERE clause.
 --Note that this query cannot be rewritten using an INNER JOIN
 
 
