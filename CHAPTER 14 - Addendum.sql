@@ -9,7 +9,7 @@
 DROP TABLE IF EXISTS dbo.Customers
 go
 CREATE TABLE dbo.Customers
-	````````(ID int IDENTITY
+	        (ID int IDENTITY
 		,FirstName varchar(70)
 		,LastName varchar(80)
 		,CreateDate datetime DEFAULT GETDATE()
