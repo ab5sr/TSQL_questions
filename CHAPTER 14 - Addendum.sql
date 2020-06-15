@@ -13,8 +13,8 @@ CREATE TABLE dbo.Customers
 		,FirstName varchar(70)
 		,LastName varchar(80)
 		,CreateDate datetime DEFAULT GETDATE()
-		,ModifyDate datetime
 		,CreateUser varchar(50) DEFAULT SYSTEM_USER
+        	,ModifyDate datetime
 		,ModifyUser varchar(50)
 		)
 GO
